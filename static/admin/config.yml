@@ -1,11 +1,14 @@
 backend:
-  name: git-gateway
+  name: annickbeau2
   branch: master
 
 media_folder: static/img
 public_folder: /img
 
 collections:
+  - label: "Profile picture"
+    name: "profilepicture"
+    widget: "image"
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
