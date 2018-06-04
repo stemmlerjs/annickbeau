@@ -26,7 +26,8 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: 
-    - {label: "Gallery", name: "galleryImages", widget: "list", fields: [{label: Image, name: image, widget: image}, {label: "Template Key", name: "templateKey", widget: "hidden", default: "gallery-item"}] }
+    - {label: "Title", name: title, widget: string, default: 'Front page Gallery'}
+    - {label: "Gallery Item", name: "gallery_item", widget: "list", fields: [{label: Image, name: image, widget: image}, {label: "Template Key", name: "templateKey", widget: "hidden", default: "gallery-item"}] }
 
   - name: "pages"
     label: "Pages"
