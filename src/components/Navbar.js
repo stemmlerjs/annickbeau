@@ -9,13 +9,10 @@ import navbarStyles from '../styles/Navbar.module.css'
 const Navbar = () => (
   <nav className={navbarStyles.container}>
     <div className={navbarStyles.logoContainer}>
-      <div className={navbarStyles.name}>Annick Beau</div>
+      <div className={navbarStyles.name}><Link to="/">Annick Beau</Link></div>
       <div className={navbarStyles.title}>Makeup Artist</div>
     </div>
     <div className={navbarStyles.navigationItems}>
-      <div className={navbarStyles.navigationItemElement}>
-        <Link to="/work">Work</Link>
-      </div>
       <div className={navbarStyles.navigationItemElement}>
         <Link to="/blog">Blog</Link>
       </div>

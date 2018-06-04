@@ -8,7 +8,24 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <section className="section">
+      <section>
+        
+      </section>
+    )
+  }
+}
+
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
+}
+
+var x  = {
+        /**
+         * <section className="section">
         <div className="container">
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
@@ -39,17 +56,8 @@ export default class IndexPage extends React.Component {
             ))}
         </div>
       </section>
-    )
-  }
-}
-
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+         */
+      }
 
 export const pageQuery = graphql`
   query IndexQuery {
