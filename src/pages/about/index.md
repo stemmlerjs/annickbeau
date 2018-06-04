@@ -1,6 +1,7 @@
 ---
 templateKey: about-page
 title: About
+display_picture: /img/img_4944.jpg
 ---
 I am a makeup artist and student at Sheridan College.
 
