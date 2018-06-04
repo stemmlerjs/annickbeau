@@ -9,7 +9,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <section>
-        
+
       </section>
     )
   }
@@ -58,6 +58,23 @@ var x  = {
       </section>
          */
       }
+
+/**
+ * Notes on how this query is working:
+ * 
+ * It uses templateKey (which can be found in any of the markup files in pages/) in order
+ * and it FILTERS in on only one of those (the "blog-post" one). So, what we're seeing is
+ * that this query looks through all of those markups and only the one with "blog-post"
+ * as it's template key gets returned.
+ * 
+ * That's pretty lit.
+ * 
+ * Now, after having filtered to only that single file, we're going to
+ * look at all of the edges > nodes (which are the elements themselves) and only
+ * return a max 400 word excerpt.
+ * 
+ * 
+ */
 
 export const pageQuery = graphql`
   query IndexQuery {

@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/img
-public_folder: /img
+media_folder: static/img  # where all static images can be found in development
+public_folder: /img       # where all static images will go in prod
 
 collections:
   - name: "blog"
@@ -23,11 +23,12 @@ collections:
   - name: "gallery"
     label: "Gallery"
     folder: "src/img/gallery"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true # can other create
+    slug: "gallery-item-{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: 
-    - {label: "Title", name: title, widget: string, default: 'Front page Gallery'}
-    - {label: "Gallery Item", name: "gallery_item", widget: "list", fields: [{label: Image, name: image, widget: image}, {label: "Template Key", name: "templateKey", widget: "hidden", default: "gallery-item"}] }
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "gallery-list"}
+      - {label: "Title", name: title, widget: string, default: 'Front page Gallery'}
+      - {label: "Gallery Item", name: "gallery_item", widget: "list", fields: [{label: Image, name: image, widget: image}, {label: "Template Key", name: "templateKey", widget: "hidden", default: "gallery-item"}] }
 
   - name: "pages"
     label: "Pages"
@@ -40,6 +41,7 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: Display_Picture, name: display_picture, widget: image}
+
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
